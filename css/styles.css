@@ -457,6 +457,62 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 24px;
 }
 
+/* --- PRINTER SHOP CMYK ACCENTS & BACKGROUND PATTERNS --- */
+.cmyk-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.cmyk-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.cmyk-cyan { background-color: #00aeef; }
+.cmyk-magenta { background-color: #ec008c; }
+.cmyk-yellow { background-color: #fff200; }
+.cmyk-black { background-color: var(--clr-navy-dark); }
+
+/* Print Halftone Dot Matrix Overlay */
+.print-halftone-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: radial-gradient(#2563eb 1.5px, transparent 1.5px), radial-gradient(#f97316 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Ambient Print Press Glowing Lights */
+.ambient-glow-cyan {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(0, 174, 239, 0.18) 0%, rgba(37, 99, 235, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(50px);
+}
+
+.ambient-glow-magenta {
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(236, 0, 140, 0.15) 0%, rgba(249, 115, 22, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(50px);
+}
+
 /* --- HERO SECTION --- */
 .hero-section {
   position: relative;
@@ -476,11 +532,11 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  opacity: 0.06;
+  opacity: 0.05;
   background-image: radial-gradient(#ffffff 2px, transparent 2px);
-  background-size: 24px 24px;
+  background-size: 28px 28px;
   pointer-events: none;
 }
 
