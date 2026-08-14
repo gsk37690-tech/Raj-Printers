@@ -11,6 +11,7 @@ window.SITE_CONFIG = {
   TAGLINE: "Quality Printing for Every Need",
   SUBTAGLINE:
     "From visiting cards & flyers to banners, invitations, and business stationery, Raj Printers helps individuals and businesses get professional print work done locally in Samayapuram.",
+  WEBSITE_URL: "https://gsk37690-tech.github.io/Raj-Printers/",
 
   // --- CONTACT INFORMATION (VERIFIED FROM GOOGLE MAPS) ---
   PHONE_PRIMARY: "070105 64303",

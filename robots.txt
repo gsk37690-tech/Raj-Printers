@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap URL
-Sitemap: https://rajprinters.in/sitemap.xml
+Sitemap: https://gsk37690-tech.github.io/Raj-Printers/sitemap.xml

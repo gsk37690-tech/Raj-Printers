@@ -7,7 +7,7 @@ This guide explains how to properly link and integrate the website with **Raj Pr
 ## Step-by-Step Integration Checklist
 
 - [ ] **Step 1: Publish Website to Live Domain**
-  - Ensure the website is published on an HTTPS domain (e.g., `https://rajprinters.in`).
+  - Ensure the website is published on an HTTPS domain (`https://gsk37690-tech.github.io/Raj-Printers/`).
 
 - [ ] **Step 2: Verify NAP Consistency (Name, Address, Phone)**
   - Ensure the business name on the profile is exactly `Raj Printers`.
@@ -17,7 +17,7 @@ This guide explains how to properly link and integrate the website with **Raj Pr
 - [ ] **Step 3: Add Website URL to Google Business Profile**
   - Sign in to the Google Account that manages the business profile.
   - Navigate to **Edit Profile** > **Contact** > **Website**.
-  - Add your live website URL (e.g., `https://rajprinters.in`).
+  - Add your live website URL (`https://gsk37690-tech.github.io/Raj-Printers/`).
 
 - [ ] **Step 4: Add Business Services to GBP**
   - In GBP, go to **Edit Services**.
