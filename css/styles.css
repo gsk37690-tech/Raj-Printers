@@ -652,20 +652,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-image-wrapper {
-  position: relative;
-  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at center, #ffffff 0%, #fef9ed 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   overflow: hidden;
-  box-shadow: var(--shadow-glow);
-  border: 2px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  
+  /* THIS is the magic line. Lower this number to make the whole thing smaller! */
+  max-width: 380px; /* Try 380px, 350px, or 300px until you like the size */
+  
+  width: 100%; 
+  height: fit-content; 
+  margin: 0 auto; 
 }
 
+/* Keep your current CSS for the main image */
 .hero-image-wrapper img {
-  width: 100%;
-  height: 420px;
-  object-fit: fill;
-  transition: transform 0.5s ease;
+  width: 100%; 
+  height: auto; 
+  display: block;
+  mix-blend-mode: multiply; 
 }
 
+/* ADD THIS to fix the tiny logo inside the card */
+.hero-image-wrapper div img {
+  mix-blend-mode: normal !important; /* Stops it from turning black */
+  width: auto !important; /* Stops it from stretching */
+  max-width: 100%; 
+}
 .hero-image-wrapper:hover img {
   transform: scale(1.03);
 }
