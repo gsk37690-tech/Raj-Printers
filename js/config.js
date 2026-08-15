@@ -63,7 +63,7 @@ window.SITE_CONFIG = {
       shortDesc:
         "Devotional flex banners, Car Festival (Therottam) invites, and temple ceremony posters featuring Arulmigu Samayapuram Mariamman artwork.",
       icon: "fa-gopuram",
-      image: "images/mariamman_deity.png",
+      image: "images/lakshmi_deity.png",
       enabled: true,
       popular: true,
     },
