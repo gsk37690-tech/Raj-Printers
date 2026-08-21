@@ -1,13 +1,13 @@
 /**
  * RAJ PRINTERS - MAIN APPLICATION JAVASCRIPT LOGIC
- * Dynamic rendering, WhatsApp pre-fills, mobile drawer & enquiry form handler
+ * Dynamic rendering, WhatsApp pre-fills, mobile drawer, query preselect & enquiry form handler
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   const config = window.SITE_CONFIG || {};
 
   // --------------------------------------------------
-  // 1. DYNAMIC SERVICES GRID RENDERING
+  // 1. DYNAMIC SERVICES GRID RENDERING (services.html / index.html)
   // --------------------------------------------------
   const servicesGrid = document.getElementById('servicesGrid');
 
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filteredServices.forEach(service => {
       const waUrl = config.getWhatsAppUrl ? config.getWhatsAppUrl(service.title) : '#';
+      const quoteUrl = `contact.html?service=${encodeURIComponent(service.title)}`;
 
       const card = document.createElement('div');
       card.className = 'service-card';
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="${waUrl}" target="_blank" class="btn btn-whatsapp btn-sm" aria-label="Enquire about ${service.title} on WhatsApp">
               <i class="fa-brands fa-whatsapp"></i> Enquiry
             </a>
-            <a href="#contact" onclick="preselectService('${service.title}')" class="btn btn-outline btn-sm" aria-label="Get custom quote for ${service.title}">
+            <a href="${quoteUrl}" class="btn btn-outline btn-sm" aria-label="Get custom quote for ${service.title}">
               Quote
             </a>
           </div>
@@ -53,8 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initial render
-  renderServices('all');
+  // Initial render if grid exists on current page
+  if (servicesGrid) {
+    renderServices('all');
+  }
 
   // Service Filter Buttons Event Handler
   const filterBtns = document.querySelectorAll('.tab-btn');
@@ -67,13 +70,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Helper function to preselect service in contact form dropdown
+  // --------------------------------------------------
+  // 2. AUTO-PRESELECT SERVICE FROM URL QUERY (contact.html)
+  // --------------------------------------------------
+  const urlParams = new URLSearchParams(window.location.search);
+  const serviceParam = urlParams.get('service');
+  const printServiceSelect = document.getElementById('printService');
+
+  if (serviceParam && printServiceSelect) {
+    for (let i = 0; i < printServiceSelect.options.length; i++) {
+      const opt = printServiceSelect.options[i];
+      if (
+        opt.value.toLowerCase().includes(serviceParam.toLowerCase()) ||
+        opt.text.toLowerCase().includes(serviceParam.toLowerCase())
+      ) {
+        printServiceSelect.selectedIndex = i;
+        break;
+      }
+    }
+  }
+
+  // Helper function for in-page selection if present
   window.preselectService = function(serviceTitle) {
-    const select = document.getElementById('printService');
-    if (select) {
-      for (let i = 0; i < select.options.length; i++) {
-        if (select.options[i].text.includes(serviceTitle) || select.options[i].value.includes(serviceTitle)) {
-          select.selectedIndex = i;
+    if (printServiceSelect) {
+      for (let i = 0; i < printServiceSelect.options.length; i++) {
+        if (
+          printServiceSelect.options[i].text.includes(serviceTitle) ||
+          printServiceSelect.options[i].value.includes(serviceTitle)
+        ) {
+          printServiceSelect.selectedIndex = i;
           break;
         }
       }
@@ -81,18 +106,18 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // --------------------------------------------------
-  // 2. CONTACT / ENQUIRY FORM WHATSAPP WORKFLOW
+  // 3. CONTACT / ENQUIRY FORM WHATSAPP WORKFLOW
   // --------------------------------------------------
   const enquiryForm = document.getElementById('enquiryForm');
   if (enquiryForm) {
     enquiryForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('custName').value.trim();
-      const phone = document.getElementById('custPhone').value.trim();
-      const service = document.getElementById('printService').value;
-      const qty = document.getElementById('printQty').value.trim();
-      const msg = document.getElementById('custMsg').value.trim();
+      const name = document.getElementById('custName')?.value.trim();
+      const phone = document.getElementById('custPhone')?.value.trim();
+      const service = document.getElementById('printService')?.value || 'General Printing';
+      const qty = document.getElementById('printQty')?.value.trim();
+      const msg = document.getElementById('custMsg')?.value.trim();
 
       if (!name || !phone) {
         alert('Please provide your name and phone number.');
@@ -116,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------
-  // 3. MOBILE MENU & DRAWER TOGGLE LOGIC
+  // 4. MOBILE MENU & DRAWER TOGGLE LOGIC
   // --------------------------------------------------
   const mobileToggle = document.getElementById('mobileToggle');
   const mobileDrawer = document.getElementById('mobileDrawer');
@@ -137,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mobileToggle) {
     mobileToggle.addEventListener('click', () => {
-      const isOpen = mobileDrawer.classList.contains('open');
+      const isOpen = mobileDrawer?.classList.contains('open');
       if (isOpen) {
         closeDrawer();
       } else {
@@ -155,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --------------------------------------------------
-  // 4. HEADER STICKY SHADOW ON SCROLL & ACTIVE LINK
+  // 5. HEADER STICKY SHADOW ON SCROLL
   // --------------------------------------------------
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
@@ -166,29 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
       header?.classList.remove('scrolled');
       if (header) header.style.boxShadow = 'none';
     }
-
-    // Active Navigation Highlight
-    const sections = document.querySelectorAll('section[id]');
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
-      const sectionId = current.getAttribute('id');
-      const navLink = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
-
-      if (navLink) {
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          navLink.classList.add('active');
-        } else {
-          navLink.classList.remove('active');
-        }
-      }
-    });
   });
 
   // --------------------------------------------------
-  // 5. UPDATE FOOTER YEAR
+  // 6. UPDATE FOOTER YEAR
   // --------------------------------------------------
   const yearSpan = document.getElementById('year');
   if (yearSpan) {

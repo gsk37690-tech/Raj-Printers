@@ -114,41 +114,7 @@
           "Trichy",
           "Mannachanallur",
           "No.1 Tollgate"
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Printing Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Visiting Card Printing"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Flex & Poster Printing"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Wedding Invitation Printing"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Brochure & Pamphlet Printing"
-              }
-            }
-          ]
-        }
+        ]
       }
     </script>
   </head>
@@ -158,7 +124,7 @@
        ========================================== -->
     <header class="site-header" id="header">
       <div class="container header-inner">
-        <a href="#home" class="brand-logo" aria-label="Raj Printers Home">
+        <a href="index.html" class="brand-logo" aria-label="Raj Printers Home">
           <img
             src="images/brand_logo_gold.png"
             alt="Raj Printers Gold Logo"
@@ -178,19 +144,19 @@
         <!-- Desktop Nav Menu -->
         <nav aria-label="Primary Navigation">
           <ul class="nav-menu">
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#why-us" class="nav-link">Why Us</a></li>
-            <li><a href="#gallery" class="nav-link">Gallery</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#reviews" class="nav-link">Reviews</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="why-us.html" class="nav-link">Why Us</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="location.html" class="nav-link">Location</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </nav>
 
         <!-- Action Buttons & Hamburger -->
         <div class="header-actions">
-          <a href="#contact" class="btn btn-primary btn-sm d-none-mobile">
+          <a href="contact.html" class="btn btn-primary btn-sm d-none-mobile">
             <i class="fa-solid fa-calculator"></i> Get Quote
           </a>
           <button
@@ -227,14 +193,13 @@
           </div>
         </div>
         <ul class="mobile-nav-list">
-          <li><a href="#home" class="mobile-nav-link">Home</a></li>
-          <li><a href="#services" class="mobile-nav-link">Services</a></li>
-          <li><a href="#why-us" class="mobile-nav-link">Why Us</a></li>
-          <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
-          <li><a href="#about" class="mobile-nav-link">About Us</a></li>
-          <li><a href="#reviews" class="mobile-nav-link">Google Reviews</a></li>
-          <li><a href="#location" class="mobile-nav-link">Location</a></li>
-          <li><a href="#contact" class="mobile-nav-link">Contact Us</a></li>
+          <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+          <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+          <li><a href="why-us.html" class="mobile-nav-link">Why Us</a></li>
+          <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+          <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+          <li><a href="location.html" class="mobile-nav-link">Location</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
         </ul>
       </div>
       <div class="drawer-contacts">
@@ -254,7 +219,7 @@
 
     <main>
       <!-- ==========================================
-         HERO SECTION
+         HERO SECTION (HOME)
          ========================================== -->
       <section class="hero-section" id="home">
         <div class="hero-bg-pattern"></div>
@@ -301,13 +266,15 @@
               >
                 <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
               </a>
+              <a href="services.html" class="btn btn-orange">
+                <i class="fa-solid fa-sliders"></i> View Services
+              </a>
               <a
-                href="https://maps.app.goo.gl/1FNJHGQRjnb7kzYv6"
-                target="_blank"
+                href="location.html"
                 class="btn btn-outline"
                 style="color: #fff; border-color: rgba(255, 255, 255, 0.3)"
               >
-                <i class="fa-solid fa-map-pin"></i> Get Directions
+                <i class="fa-solid fa-map-pin"></i> Shop Location
               </a>
             </div>
 
@@ -365,685 +332,80 @@
       </section>
 
       <!-- ==========================================
-         SERVICES SECTION
+         QUICK OVERVIEW / INTRO CARDS (HOME)
          ========================================== -->
-      <section
-        class="section-padding"
-        id="services"
-        style="position: relative; overflow: hidden"
-      >
+      <section class="section-padding" style="background-color: var(--clr-surface); position: relative; overflow: hidden;">
         <div class="print-halftone-overlay"></div>
         <div class="container" style="position: relative; z-index: 2">
           <div class="text-center">
-            <span class="section-tag"
-              ><i class="fa-solid fa-sliders"></i> Printing Services
-              <span class="cmyk-bar"
-                ><span class="cmyk-dot cmyk-cyan"></span
-                ><span class="cmyk-dot cmyk-magenta"></span
-                ><span class="cmyk-dot cmyk-yellow"></span
-                ><span class="cmyk-dot cmyk-black"></span></span
-            ></span>
-            <h2 class="section-title">What We Print For You</h2>
+            <span class="section-tag">
+              <i class="fa-solid fa-print"></i> What We Offer
+              <span class="cmyk-bar">
+                <span class="cmyk-dot cmyk-cyan"></span>
+                <span class="cmyk-dot cmyk-magenta"></span>
+                <span class="cmyk-dot cmyk-yellow"></span>
+                <span class="cmyk-dot cmyk-black"></span>
+              </span>
+            </span>
+            <h2 class="section-title">Complete Printing Solutions in Samayapuram</h2>
             <p class="section-subtitle">
-              We provide a complete range of offset, digital, and flex printing
-              solutions for personal, commercial, and institutional
-              requirements.
-            </p>
-
-            <div class="service-tabs">
-              <button class="tab-btn active" data-filter="all">
-                All Services
-              </button>
-              <button class="tab-btn" data-filter="business">Business</button>
-              <button class="tab-btn" data-filter="commercial">
-                Commercial
-              </button>
-              <button class="tab-btn" data-filter="personal">Personal</button>
-            </div>
-          </div>
-
-          <div class="services-grid" id="servicesGrid">
-            <!-- Dynamic rendering via app.js with config data -->
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-         WHY CHOOSE US SECTION
-         ========================================== -->
-      <section class="section-padding why-section" id="why-us">
-        <div class="container">
-          <div class="text-center">
-            <span class="section-tag"
-              ><i class="fa-solid fa-circle-check"></i> Authentic Value</span
-            >
-            <h2 class="section-title">Why Choose Raj Printers?</h2>
-            <p class="section-subtitle">
-              We take pride in delivering honest, reliable printing services
-              with attention to color quality and clear turnaround times.
+              Choose a section below to explore our services, view sample work, read customer reviews, or get an instant quote.
             </p>
           </div>
 
           <div class="why-grid">
             <div class="why-card">
-              <div class="why-icon"><i class="fa-solid fa-gem"></i></div>
-              <h3 class="why-title">Quality-Focused Printing</h3>
-              <p class="why-desc">
-                Crisp text, vibrant colors, and durable stock materials for
-                every project, from small cards to large banners.
-              </p>
+              <div class="why-icon"><i class="fa-solid fa-sliders"></i></div>
+              <h3 class="why-title">Printing Services</h3>
+              <p class="why-desc">Visiting cards, outdoor flex banners, wedding cards, brochures, GST bill books, Xerox & lamination.</p>
+              <div style="margin-top: 16px;">
+                <a href="services.html" class="btn btn-outline btn-sm">Explore Services <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
             </div>
 
             <div class="why-card">
-              <div class="why-icon">
-                <i class="fa-solid fa-location-dot"></i>
+              <div class="why-icon"><i class="fa-solid fa-photo-film"></i></div>
+              <h3 class="why-title">Print Gallery</h3>
+              <p class="why-desc">See real photos of our digital flex printing machine in action, shopfront signboards, and printed work.</p>
+              <div style="margin-top: 16px;">
+                <a href="gallery.html" class="btn btn-outline btn-sm">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
               </div>
-              <h3 class="why-title">Convenient Local Shop</h3>
-              <p class="why-desc">
-                Located right at Siva Complex, Kariyamanickam Road, Samayapuram,
-                making local pickup easy and fast.
-              </p>
             </div>
 
             <div class="why-card">
-              <div class="why-icon"><i class="fa-brands fa-whatsapp"></i></div>
-              <h3 class="why-title">Easy WhatsApp Enquiries</h3>
-              <p class="why-desc">
-                Share your content or design on WhatsApp, get quick cost
-                estimates, and confirm your order seamlessly.
-              </p>
+              <div class="why-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <h3 class="why-title">Why Choose Us</h3>
+              <p class="why-desc">Discover our quality focus, convenient local shop pickup, honest rates, and instant WhatsApp support.</p>
+              <div style="margin-top: 16px;">
+                <a href="why-us.html" class="btn btn-outline btn-sm">Why Raj Printers <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
             </div>
 
             <div class="why-card">
-              <div class="why-icon">
-                <i class="fa-solid fa-layer-group"></i>
+              <div class="why-icon"><i class="fa-solid fa-store"></i></div>
+              <h3 class="why-title">About Our Shop</h3>
+              <p class="why-desc">Learn about Raj Printers, our business and personal print solutions, and 5.0★ verified Google reviews.</p>
+              <div style="margin-top: 16px;">
+                <a href="about.html" class="btn btn-outline btn-sm">About Us <i class="fa-solid fa-arrow-right"></i></a>
               </div>
-              <h3 class="why-title">Multiple Print Options</h3>
-              <p class="why-desc">
-                From single copies to bulk offset quantities, flex banner
-                boards, and laminated cards under one roof.
-              </p>
             </div>
 
             <div class="why-card">
-              <div class="why-icon"><i class="fa-solid fa-user-check"></i></div>
-              <h3 class="why-title">Personal & Commercial</h3>
-              <p class="why-desc">
-                Dedicated print support for shopkeepers, schools, event
-                organizers, and families hosting weddings or functions.
-              </p>
+              <div class="why-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <h3 class="why-title">Shop Location</h3>
+              <p class="why-desc">Located at 94, Kariyamanickam Road, Siva Complex, Samayapuram. Open Monday–Saturday 8 AM–10 PM.</p>
+              <div style="margin-top: 16px;">
+                <a href="location.html" class="btn btn-outline btn-sm">Find Location <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
             </div>
 
             <div class="why-card">
-              <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
-              <h3 class="why-title">Friendly Local Service</h3>
-              <p class="why-desc">
-                Helpful local advice on card paper thickness, banner sizing, and
-                layout formatting before final print.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-         PRINTING GALLERY / SAMPLES
-         ========================================== -->
-      <section class="section-padding" id="gallery">
-        <div class="container">
-          <div class="text-center">
-            <span class="section-tag"
-              ><i class="fa-solid fa-photo-film"></i> Print Gallery</span
-            >
-            <h2 class="section-title">Sample Work & Shop Photos</h2>
-            <p class="section-subtitle">
-              Explore real photos of our shopfront, workshop machinery, official
-              logo, and print work in Samayapuram.
-            </p>
-          </div>
-
-          <div class="gallery-grid">
-            <!-- 1. Real Flex Banner Printing in Action -->
-            <div class="gallery-item">
-              <img
-                src="images/real_flex_printing_in_action.png"
-                alt="Real Digital Flex Banner Printing Machine in Action Raj Printers"
-              />
-              <div class="gallery-overlay">
-                <h4>Real Flex Banner Printing</h4>
-                <p>
-                  High-speed digital vinyl flex & poster printing (070105 64303)
-                </p>
+              <div class="why-icon"><i class="fa-solid fa-calculator"></i></div>
+              <h3 class="why-title">Get a Quote</h3>
+              <p class="why-desc">Fill out our simple quote form or connect directly with our printing specialists on WhatsApp.</p>
+              <div style="margin-top: 16px;">
+                <a href="contact.html" class="btn btn-primary btn-sm">Get Free Quote <i class="fa-solid fa-arrow-right"></i></a>
               </div>
-            </div>
-
-            <!-- 2. Real Storefront & Outdoor Signboard -->
-            <div class="gallery-item">
-              <img
-                src="images/real_shop_exterior.png"
-                alt="Raj Printers Real Shopfront and Flex Signboard Siva Complex"
-              />
-              <div class="gallery-overlay">
-                <h4>Outdoor Flex Signboard & Shopfront</h4>
-                <p>Siva Complex, Kariyamanickam Road, Samayapuram</p>
-              </div>
-            </div>
-
-            <!-- 3. Real Workshop Machinery & Plotter -->
-            <div class="gallery-item">
-              <img
-                src="images/real_machinery_studio.png"
-                alt="Vinyl Plotter and Large Format Flex Printer Studio Raj Printers"
-              />
-              <div class="gallery-overlay">
-                <h4>Workshop Printing Press</h4>
-                <p>Vinyl Plotter & Large Format Roll Printers</p>
-              </div>
-            </div>
-
-            <!-- 4. Wedding & Function Invitations -->
-            <div class="gallery-item">
-              <img
-                src="images/invitation_cards.png"
-                alt="Wedding Invitation Card Printing Trichy"
-              />
-              <div class="gallery-overlay">
-                <h4>Wedding & Function Invites</h4>
-                <p>Traditional Tamil Marriage & Housewarming Cards</p>
-              </div>
-            </div>
-
-            <!-- 5. Visiting Cards -->
-            <div class="gallery-item">
-              <img
-                src="images/visiting_cards.png"
-                alt="Visiting Cards Printing Samples Raj Printers"
-              />
-              <div class="gallery-overlay">
-                <h4>Visiting Cards</h4>
-                <p>Matte, Glossy, Foil & Textured Cards</p>
-              </div>
-            </div>
-
-            <!-- 6. Flyers & Pamphlets -->
-            <div class="gallery-item">
-              <img
-                src="images/brochures_flyers.png"
-                alt="Brochures and Pamphlet Printing Raj Printers"
-              />
-              <div class="gallery-overlay">
-                <h4>Flyers & Pamphlets</h4>
-                <p>Promotional Marketing Pamphlets & Catalogues</p>
-              </div>
-            </div>
-
-            <!-- 7. Stickers & Product Labels -->
-            <div class="gallery-item">
-              <img
-                src="images/stickers_product_labels.png"
-                alt="Stickers and Product Labels Printing Raj Printers"
-              />
-              <div class="gallery-overlay">
-                <h4>Stickers & Product Labels</h4>
-                <p>Custom Die-Cut Vinyl Stickers & Packaging Decals</p>
-              </div>
-            </div>
-
-            <!-- 8. GST Bill Books & Stationery -->
-            <div class="gallery-item">
-              <img
-                src="images/bill_books_stationery.png"
-                alt="GST Bill Books and Commercial Stationery Raj Printers"
-              />
-              <div class="gallery-overlay">
-                <h4>GST Bill Books & Stationery</h4>
-                <p>Duplicate/Triplicate Cash Vouchers & Letterheads</p>
-              </div>
-            </div>
-
-            <!-- 9. KCRT -->
-            <div class="gallery-item">
-              <img
-                src="images/KRCT.jpeg"
-                alt="KCRT Project Work Sample Raj Printers"
-              />
-              <div class="gallery-overlay">
-                <h4>KCRT Project</h4>
-                <p>Professional Printing Work Sample</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-         ABOUT US SECTION
-         ========================================== -->
-      <section
-        class="section-padding"
-        id="about"
-        style="background-color: var(--clr-surface)"
-      >
-        <div class="container">
-          <div class="about-grid">
-            <div class="about-img-frame">
-              <img
-                src="images/real_shop_exterior.png"
-                alt="Raj Printers Real Storefront at Siva Complex, Samayapuram"
-              />
-              <div class="about-experience-badge">
-                <h3>5.0 ★</h3>
-                <p>Google Customer Rating</p>
-              </div>
-            </div>
-
-            <div class="about-text">
-              <span class="section-tag"
-                ><i class="fa-solid fa-store"></i> About Raj Printers</span
-              >
-              <h2 class="section-title">
-                Your Local Printing Shop in Samayapuram
-              </h2>
-              <p>
-                Raj Printers is an established local printing business serving
-                Samayapuram and nearby localities in Tiruchirappalli district.
-                We specialize in everyday printing solutions for individuals,
-                shopkeepers, schools, and local businesses.
-              </p>
-              <p>
-                Whether you need visiting cards for your new business venture,
-                vibrant flex banners for an upcoming festival or event, elegant
-                Tamil wedding invitations, or quick xerox copies, our shop is
-                committed to giving you practical, well-finished work with
-                transparent service.
-              </p>
-
-              <ul class="about-features-list">
-                <li class="about-feature-item">
-                  <i class="fa-solid fa-circle-check"></i> Quality Material
-                  Stock
-                </li>
-                <li class="about-feature-item">
-                  <i class="fa-solid fa-circle-check"></i> Clear Color Proofing
-                </li>
-                <li class="about-feature-item">
-                  <i class="fa-solid fa-circle-check"></i> Custom Quantity
-                  Orders
-                </li>
-                <li class="about-feature-item">
-                  <i class="fa-solid fa-circle-check"></i> Direct Owner Support
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-         BUSINESS vs PERSONAL PRINTING SPLIT
-         ========================================== -->
-      <section class="split-section">
-        <div class="container">
-          <div class="text-center" style="margin-bottom: 48px">
-            <span
-              class="section-tag"
-              style="background: rgba(255, 255, 255, 0.1); color: #60a5fa"
-              ><i class="fa-solid fa-users"></i> Tailored Solutions</span
-            >
-            <h2 class="section-title" style="color: #fff">
-              Printing for Business & Personal Needs
-            </h2>
-          </div>
-
-          <div class="split-grid">
-            <!-- Business Card -->
-            <div class="split-card">
-              <div class="split-icon">
-                <i class="fa-solid fa-briefcase"></i>
-              </div>
-              <h3 class="split-title">Commercial & Business Printing</h3>
-              <p class="split-desc">
-                Help your business look sharp with custom-branded stationery,
-                promotional materials, and store signage.
-              </p>
-              <ul class="split-list">
-                <li>
-                  <i class="fa-solid fa-check"></i> Visiting cards (Glossy,
-                  Matte, Embossed)
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> GST Bill Books & Cash
-                  Vouchers
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Promotional Pamphlets &
-                  Catalogues
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Flex Shop Name Boards &
-                  Vinyl Banners
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Custom Product Labels &
-                  Stickers
-                </li>
-              </ul>
-              <a
-                href="https://wa.me/917010564303?text=Hello%20Raj%20Printers%2C%20I%20would%20like%20to%20enquire%20about%20Business%20Printing"
-                target="_blank"
-                class="btn btn-primary"
-              >
-                <i class="fa-brands fa-whatsapp"></i> Business Enquiry
-              </a>
-            </div>
-
-            <!-- Personal Card -->
-            <div class="split-card">
-              <div class="split-icon"><i class="fa-solid fa-heart"></i></div>
-              <h3 class="split-title">Personal & Event Printing</h3>
-              <p class="split-desc">
-                Celebrate special family moments and personal milestones with
-                beautiful printed invitations and posters.
-              </p>
-              <ul class="split-list">
-                <li>
-                  <i class="fa-solid fa-check"></i> Wedding Cards (Traditional
-                  Tamil & Modern)
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Housewarming (Grupravesam)
-                  Invites
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Samayapuram Mariamman Temple
-                  Festival Flex Banners
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Birthday & Car Festival
-                  (Therottam) Invitation Cards
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> School/College Project
-                  Copying & Binding
-                </li>
-              </ul>
-              <a
-                href="https://wa.me/917010564303?text=Hello%20Raj%20Printers%2C%20I%20would%20like%20to%20enquire%20about%20Personal%20Printing"
-                target="_blank"
-                class="btn btn-whatsapp"
-              >
-                <i class="fa-brands fa-whatsapp"></i> Personal Enquiry
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-         GOOGLE REVIEWS & TRUST SECTION
-         ========================================== -->
-      <section class="section-padding" id="reviews">
-        <div class="container">
-          <div class="reviews-banner">
-            <div class="stars-group">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <div class="review-score">5.0 ★</div>
-            <h3 style="font-size: 1.5rem; margin-bottom: 8px">
-              Customer Reviews on Google
-            </h3>
-            <p class="review-subtitle">
-              See what local customers in Samayapuram have to say about our
-              printing service, speed, and quality on Google Maps.
-            </p>
-            <a
-              href="https://maps.app.goo.gl/1FNJHGQRjnb7kzYv6"
-              target="_blank"
-              class="btn btn-primary"
-            >
-              <i class="fa-brands fa-google"></i> View Google Reviews
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-         LOCATION & HOURS SECTION
-         ========================================== -->
-      <section
-        class="section-padding"
-        id="location"
-        style="background-color: var(--clr-surface)"
-      >
-        <div class="container">
-          <div class="text-center">
-            <span class="section-tag"
-              ><i class="fa-solid fa-map-location-dot"></i> Visit Our Shop</span
-            >
-            <h2 class="section-title">Shop Location & Opening Hours</h2>
-            <p class="section-subtitle">
-              Conveniently located on Kariyamanickam Road in Samayapuram. Visit
-              us directly or get driving directions via Google Maps.
-            </p>
-          </div>
-
-          <div class="location-grid">
-            <div class="location-info-card">
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fa-solid fa-building-user"></i>
-                </div>
-                <div class="info-details">
-                  <h4>Address</h4>
-                  <p>
-                    <strong>Raj Printers</strong><br />94, Kariyamanickam Road,
-                    Siva Complex<br />Samayapuram, Tamil Nadu 621112
-                  </p>
-                  <p
-                    style="
-                      margin-top: 4px;
-                      font-size: 0.85rem;
-                      color: var(--clr-blue-primary);
-                    "
-                  >
-                    Plus Code: WPJP+9C Samayapuram
-                  </p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
-                <div class="info-details">
-                  <h4>Contact Numbers</h4>
-                  <p>
-                    <a
-                      href="tel:07010564303"
-                      style="color: var(--clr-blue-primary); font-weight: 600"
-                      >070105 64303</a
-                    >
-                    /
-                    <a
-                      href="tel:09342709489"
-                      style="color: var(--clr-blue-primary); font-weight: 600"
-                      >93427 09489</a
-                    >
-                  </p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
-                <div class="info-details">
-                  <h4>Opening Hours</h4>
-                  <p><strong>Monday - Saturday:</strong> 8:00 AM – 10:00 PM</p>
-                  <p><strong>Sunday:</strong> Emergency / Phone Call Only</p>
-                </div>
-              </div>
-
-              <div style="margin-top: 32px">
-                <a
-                  href="https://maps.app.goo.gl/1FNJHGQRjnb7kzYv6"
-                  target="_blank"
-                  class="btn btn-primary"
-                  style="width: 100%"
-                >
-                  <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
-                  on Google Maps
-                </a>
-              </div>
-            </div>
-
-            <div class="map-wrapper">
-              <!-- Google Maps Embed -->
-              <iframe
-                title="Raj Printers Google Map Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.43346513511!2d78.73600000000001!3d10.930400000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf70000000001%3A0x0!2zMTDCsDU1JzQ5LjQiTiA3OMKwNDQnMDkuNiJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-         CONTACT / ENQUIRY SECTION
-         ========================================== -->
-      <section class="section-padding" id="contact">
-        <div class="container">
-          <div class="text-center">
-            <span class="section-tag"
-              ><i class="fa-solid fa-envelope-open-text"></i> Quick
-              Contact</span
-            >
-            <h2 class="section-title">Get a Printing Quote</h2>
-            <p class="section-subtitle">
-              Have a question or need a price estimate? Fill out the simple
-              enquiry form below or message us directly on WhatsApp.
-            </p>
-          </div>
-
-          <div class="contact-grid">
-            <div class="quick-contact-card">
-              <div>
-                <h3>Fastest Response via WhatsApp</h3>
-                <p>
-                  For immediate response or to send sample images and PDF files
-                  for printing, click below to chat on WhatsApp.
-                </p>
-
-                <div class="direct-actions-list">
-                  <a
-                    href="https://wa.me/917010564303"
-                    target="_blank"
-                    class="btn btn-whatsapp"
-                  >
-                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-                    (070105 64303)
-                  </a>
-                  <a href="tel:07010564303" class="btn btn-white">
-                    <i class="fa-solid fa-phone"></i> Call Primary Number
-                  </a>
-                  <a href="tel:09342709489" class="btn btn-white">
-                    <i class="fa-solid fa-phone"></i> Call Secondary Number
-                  </a>
-                </div>
-              </div>
-
-              <div style="margin-top: 32px; font-size: 0.88rem; color: #cbd5e1">
-                <i class="fa-solid fa-circle-info"></i> Standard shop hours:
-                8:00 AM to 10:00 PM (Mon-Sat).
-              </div>
-            </div>
-
-            <div class="contact-form-card">
-              <form id="enquiryForm">
-                <div class="form-group">
-                  <label for="custName">Your Name *</label>
-                  <input
-                    type="text"
-                    id="custName"
-                    class="form-control"
-                    placeholder="e.g. Ramesh Kumar"
-                    required
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="custPhone">Phone / WhatsApp Number *</label>
-                  <input
-                    type="tel"
-                    id="custPhone"
-                    class="form-control"
-                    placeholder="e.g. 98765 43210"
-                    required
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="printService">What do you need printed?</label>
-                  <select id="printService" class="form-control">
-                    <option value="Visiting Cards">
-                      Visiting Cards Printing
-                    </option>
-                    <option value="Flex & Poster Banner">
-                      Flex & Poster Printing
-                    </option>
-                    <option value="Wedding / Function Invitation">
-                      Wedding & Function Cards
-                    </option>
-                    <option value="Flyers & Pamphlets">
-                      Flyers & Pamphlets
-                    </option>
-                    <option value="Bill Books & Letterheads">
-                      Bill Books & Letterheads
-                    </option>
-                    <option value="Xerox & Copying">
-                      Xerox / Copying / Lamination
-                    </option>
-                    <option value="Custom Order">Other / Custom Order</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="printQty">Quantity Needed</label>
-                  <input
-                    type="text"
-                    id="printQty"
-                    class="form-control"
-                    placeholder="e.g. 500 Cards, 1 Flex (6x4 ft), etc."
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="custMsg"
-                    >Additional Message / Paper preference</label
-                  >
-                  <textarea
-                    id="custMsg"
-                    class="form-control"
-                    placeholder="Mention size details, color preference, or special instructions..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  class="btn btn-primary"
-                  style="width: 100%"
-                >
-                  <i class="fa-brands fa-whatsapp"></i> Send Quote Request via
-                  WhatsApp
-                </button>
-
-                <p class="form-note">
-                  Your enquiry will open WhatsApp directly with your filled
-                  details for instant response.
-                </p>
-              </form>
             </div>
           </div>
         </div>
@@ -1078,24 +440,25 @@
           <div class="footer-col">
             <h4>Quick Links</h4>
             <ul class="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Printing Services</a></li>
-              <li><a href="#why-us">Why Choose Us</a></li>
-              <li><a href="#gallery">Sample Work</a></li>
-              <li><a href="#about">About Shop</a></li>
-              <li><a href="#location">Shop Location</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Printing Services</a></li>
+              <li><a href="why-us.html">Why Choose Us</a></li>
+              <li><a href="gallery.html">Sample Work</a></li>
+              <li><a href="about.html">About Shop</a></li>
+              <li><a href="location.html">Shop Location</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <h4>Our Services</h4>
             <ul class="footer-links">
-              <li><a href="#services">Visiting Cards</a></li>
-              <li><a href="#services">Flex & Poster Printing</a></li>
-              <li><a href="#services">Wedding Invitations</a></li>
-              <li><a href="#services">Flyers & Pamphlets</a></li>
-              <li><a href="#services">GST Bill Books</a></li>
-              <li><a href="#services">Xerox & Lamination</a></li>
+              <li><a href="services.html">Visiting Cards</a></li>
+              <li><a href="services.html">Flex & Poster Printing</a></li>
+              <li><a href="services.html">Wedding Invitations</a></li>
+              <li><a href="services.html">Flyers & Pamphlets</a></li>
+              <li><a href="services.html">GST Bill Books</a></li>
+              <li><a href="services.html">Xerox & Lamination</a></li>
             </ul>
           </div>
 
@@ -1154,15 +517,11 @@
         <i class="fa-brands fa-whatsapp"></i>
         <span>WhatsApp</span>
       </a>
-      <a
-        href="https://maps.app.goo.gl/1FNJHGQRjnb7kzYv6"
-        target="_blank"
-        class="sticky-action-btn map"
-      >
+      <a href="location.html" class="sticky-action-btn map">
         <i class="fa-solid fa-location-dot"></i>
         <span>Map</span>
       </a>
-      <a href="#contact" class="sticky-action-btn quote">
+      <a href="contact.html" class="sticky-action-btn quote">
         <i class="fa-solid fa-calculator"></i>
         <span>Quote</span>
       </a>
